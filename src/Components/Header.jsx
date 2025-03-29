@@ -107,11 +107,10 @@ export const Header = () => {
   return (
     <>
       <header
-        className={`p-4 sticky top-0 z-20 shadow-md transition-colors duration-300 ${
-          isDarkMode
-            ? 'bg-gradient-to-r from-gray-900 to-blue-900 text-white'
-            : 'bg-gradient-to-r from-blue-500 to-indigo-500 text-white'
-        }`}
+        className={`p-4 sticky top-0 z-20 shadow-md transition-colors duration-300 ${isDarkMode
+          ? 'bg-gradient-to-r from-gray-900 to-blue-900 text-white'
+          : 'bg-gradient-to-r from-blue-500 to-indigo-500 text-white'
+          }`}
       >
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
           <h1 className="text-2xl font-bold tracking-tight hover:text-yellow-300 transition-colors">
@@ -167,6 +166,26 @@ export const Header = () => {
               className="px-3 py-2 bg-white/20 dark:bg-gray-800/80 rounded-lg hover:bg-white/30 dark:hover:bg-gray-700/80 transition-colors flex items-center gap-1 text-white"
             >
               📜 Historial
+            </button>
+
+            <button
+              id="showHistory"
+              className="px-3 py-2 bg-white/20 dark:bg-gray-800/80 rounded-lg hover:bg-white/30 dark:hover:bg-gray-700/80 transition-colors flex items-center gap-2 text-white text-sm font-medium shadow-md active:scale-95"
+              onClick={() => window.open("https://www.webintoapp.com/store/672871", "_blank")}>
+              <span>Ir a la App Mobil</span>
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                />
+              </svg>
             </button>
 
             {showFavorites && (
